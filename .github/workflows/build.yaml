@@ -27,5 +27,5 @@ jobs:
         run: |
           mvn package
           docker build --tag ghcr.io/maoz9/petclinic:latest -f Dockerfile .
-          docker login --username jny-gk --password $GH_TOKEN ghcr.io
+          docker login --username jny-gk --password $GITHUB_ACCESSTOKEN ghcr.io
           docker push ghcr.io/maoz9/petclinic:latest
